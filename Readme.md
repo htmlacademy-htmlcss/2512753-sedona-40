@@ -2,7 +2,7 @@
 
 * Студент: [Олег Самохоткин](https://up.htmlacademy.ru/htmlcss/40/user/2512753).
 * Наставник: [Валера Хаслер](https://htmlacademy.ru/profile/id224163).
-
+* Сайт: [Мой проект Седона](https://olegsamokhotkin.github.io/2512753-sedona-40/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
