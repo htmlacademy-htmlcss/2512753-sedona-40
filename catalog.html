@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
+	<link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header" data-test="header"> <!--  data  -->
@@ -33,12 +34,17 @@
               <span class="notification-badge">12</span> <!-- notification-badge -->
             </a>
           </li>
+		  <li>
+			<a class="header-button" href="#">Хочу сюда</a>  <!-- Отдельно от списка, удобнее стилизовать-->
+		  </li>
         </ul>
       </nav>
-      <a class="header-button" href="#">Хочу сюда</a> <!-- # -->
+
     </header>
     <main class="main-inner" data-test="main">
-      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      
+      <section class="filters" data-test="filter">
+	  <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ol class="breadcrumbs"> <!-- header?-->
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link breadcrumbs-home-link" href="index.html">
@@ -49,7 +55,6 @@
           <a class="breadcrumbs-link" href="catalog.html" aria-current="page">Гостиницы</a>
         </li>
       </ol>
-      <section class="filters" data-test="filter">
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -188,7 +193,7 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item">
+          <li class="pagination-item-current">
             <a class="pagination-link pagination-current">1</a>
           </li>
           <li class="pagination-item">
@@ -200,7 +205,7 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item">
+          <li class="pagination-item-text">
             <span class="pagination-text">...</span>
           </li>
           <li class="pagination-item">
@@ -208,7 +213,7 @@
           </li>
         </ul>
       </section>
-      <section class="subscribe" data-test="subscribe"> <!-- data-test="subscribe" -->
+      <section class="subscribe-catalog" data-test="subscribe"> <!-- data-test="subscribe" -->
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -223,16 +228,16 @@
     <footer class="page-footer" data-test="footer"> <!-- data-test="footer" -->
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="footer-social-link" href="https://vk.com/htmlacademy">
+          <a class="footer-social-link vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
-        <li class="footer-social-item">
+        <li class="footer-social-item tg">
           <a class="footer-social-link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
-        <li class="footer-social-item">
+        <li class="footer-social-item youtube">
           <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">YouTube</span>
           </a>
