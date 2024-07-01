@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+
   <body>
     <header class="page-header" data-test="header"> <!--  data  -->
       <nav class="navigation">
@@ -117,29 +119,34 @@
         </form>
       </section>
       <section class="catalog-products" data-test="catalog">
-        <h2 class="catalog-products-title">Найдено гостиниц: <span>38</span></h2>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала популярные</option>
-          <option value="cheap" selected>Сначала дешёвые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <ul class="view-buttons">
-          <li class="view-button-item">
-            <a class="view-button-tile" href="catalog.html?view=tile">
-              <span class="visually-hidden">Показать плиткой</span>
-            </a>
-          </li>
-          <li class="view-button-item">
-            <a class="view-button-card" href="catalog.html?view=card">
-              <span class="visually-hidden">Показать карточками</span>
-            </a>
-          </li>
-          <li class="view-button-item">
-            <a class="view-button-list" href="catalog.html?view=list">
-              <span class="visually-hidden">Показать списком</span>
-            </a>
-          </li>
-        </ul>
+        <div class="catalog-products-flex">
+          <h2 class="catalog-products-title">Найдено гостиниц: <span>38</span></h2>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Сначала популярные</option>
+            <option value="cheap" selected>Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <ul class="view-buttons">
+            <li class="view-button-item">
+              <div class="view-tile"></div>
+              <a class="view-button-tile" href="catalog.html?view=tile">
+                <span class="visually-hidden">Показать плиткой</span>
+              </a>
+            </li>
+            <li class="view-button-item">
+              <div class="view-card"></div>
+              <a class="view-button-card" href="catalog.html?view=card">
+                <span class="visually-hidden">Показать карточками</span>
+              </a>
+            </li>
+            <li class="view-button-item">
+              <div class="view-list"></div>
+              <a class="view-button-list" href="catalog.html?view=list">
+                <span class="visually-hidden">Показать списком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
