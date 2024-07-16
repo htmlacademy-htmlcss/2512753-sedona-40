@@ -34,8 +34,8 @@
           <li class="navigation-user-item">
             <a class="navigation-user-link navigation-user-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
-              <span class="notification-badge">12</span> <!-- notification-badge -->
             </a>
+            <span class="notification-badge">12</span> <!-- notification-badge -->
           </li>
           <li>
             <a class="header-button" href="#">Хочу сюда!</a> <!-- Отдельно от списка, удобнее стилизовать-->
@@ -53,70 +53,85 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-navigation-link" href="catalog.html" aria-current="page">Гостиницы</a>
+            <a class="breadcrumbs-link breadcrumbs-navigation-link" href="catalog.html"
+              aria-current="page">Гостиницы</a>
           </li>
         </ul>
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-checkbox">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control-checked">
+                <label class="control-checked control-focus">
                   <input class="control-input" type="checkbox" name="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-checked">
+                <label class="control-checked control-focus">
                   <input class="control-input" type="checkbox" name="parking" checked>
                   Парковка
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-check">
+                <label class="control-check control-focus">
                   <input class="control-input" type="checkbox" name="wifi">
                   Wi-Fi
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-radio">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control control-focus">
                   <input class="control-input" type="radio" name="housing-type" value="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control control-focus">
                   <input class="control-input" type="radio" name="housing-type" value="motel">
                   Мотель
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control control-focus">
                   <input class="control-input" type="radio" name="housing-type" value="apartaments">
                   Апартаменты
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <label class="filter-range-control">От <input type="number" name="min-interval" value="0"></label>
-            <label class="filter-range-control">До <input type="number" name="max-interval" value="9000"></label>
-            <button class="filter-range-handle min" type="button">
-              <span class="visually-hidden">Управление нижней границей стоимости</span>
-            </button>
-            <button class="range-toggle toggle-max" type="button">
-              <span class="visually-hidden">Управление верхней границей стоимости</span>
-            </button>
+          <fieldset class="catalog-filter-price">
+            <legend class="catalog-filter-title">Стоимость, <span>₽:</span></legend>
+              <div class="catalog-inputs">
+                <input class="catalog-min catalog-focus" type="text" name="max-sum" value="0">
+                <input class="catalog-max catalog-focus" type="text" name="min-sum" value="9000">
+                <span class="from-to">от</span>
+                <span class="before-to">до</span>
+              </div>
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; width: 226px;">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+          </fieldset>
+
+
+
+
+          <div class="catalog-buttons">
             <button class="catalog-filter-submit" type="submit">Применить</button>
             <button class="catalog-filter-reset" type="reset">Сбросить</button>
-          </fieldset>
+          </div>
         </form>
       </section>
       <section class="catalog-products" data-test="catalog">
@@ -124,29 +139,29 @@
           <h2 class="catalog-products-title">Найдено гостиниц: <span>38</span></h2>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала популярные</option>
-            <option value="cheap" selected>Сначала дешёвые</option>
+            <option value="cheap" selected>Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <ul class="view-buttons">
-            <li class="view-button-item">
-              <div class="view-tile"></div>
-              <a class="view-button-tile" href="catalog.html?view=tile">
-                <span class="visually-hidden">Показать плиткой</span>
-              </a>
-            </li>
-            <li class="view-button-item">
-              <div class="view-card"></div>
-              <a class="view-button-card" href="catalog.html?view=card">
-                <span class="visually-hidden">Показать карточками</span>
-              </a>
-            </li>
-            <li class="view-button-item">
-              <div class="view-list"></div>
-              <a class="view-button-list" href="catalog.html?view=list">
-                <span class="visually-hidden">Показать списком</span>
-              </a>
-            </li>
-          </ul>
+          <div class="view-buttons">
+            <a href="catalog.html?view=card" class="view-buttons-item">
+              <span class="visually-hidden">Показать карточки</span>
+              <svg role="img" aria-label="Показать карточки" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none">
+                <path fill="#000" d="M4 0H0v6h4V0Zm12 0h-4v6h4V0Zm-6 0H6v6h4V0ZM4 8H0v6h4V8Zm12 0h-4v6h4V8Zm-6 0H6v6h4V8Z"/>
+              </svg>
+            </a>
+            <a href="catalog.html?view=tile" class="view-buttons-item">
+              <span class="visually-hidden">Показать плитку</span>
+              <svg role="img" aria-label="Показать плитку" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none">
+                <path fill="#000" d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/>
+              </svg>
+            </a>
+            <a href="catalog.html?view=list" class="view-buttons-item">
+              <span class="visually-hidden">Показать список</span>
+              <svg role="img" aria-label="Показать список" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none">
+                <path fill="#000" d="M2 0H0v2h2V0Zm14 0H4v2h12V0ZM2 4H0v2h2V4Zm14 0H4v2h12V4ZM2 8H0v2h2V8Zm14 0H4v2h12V8ZM2 12H0v2h2v-2Zm14 0H4v2h12v-2Z"/>
+              </svg>
+            </a>
+          </div>
         </div>
         <ul class="product-list">
           <li class="product-card">
@@ -161,7 +176,7 @@
               <a class="product-card-button" href="#">Подробнее</a>
               <button class="add-favorite-button" type="button">В избранное</button>
               <p class="product-card-stars product-card-stars-4"><span class="visually-hidden">4 звезды</span></p>
-              <p class="product-card-rating">Рейтинг: <span>8,5</span></p>
+              <p class="product-card-rating">Рейтинг: <span class="product-card-rating-number">8,5</span></p>
             </div>
           </li>
           <li class="product-card">
@@ -175,7 +190,7 @@
               <a class="product-card-button" href="#">Подробнее</a>
               <button class="favorite-button" type="button">В избранном</button>
               <p class="product-card-stars product-card-stars-4"><span class="visually-hidden">4 звезды</span></p>
-              <p class="product-card-rating">Рейтинг: <span>9,2</span></p>
+              <p class="product-card-rating">Рейтинг: <span class="product-card-rating-number">9,2</span></p>
             </div>
           </li>
           <li class="product-card">
@@ -190,7 +205,7 @@
               <a class="product-card-button" href="#">Подробнее</a>
               <button class="add-favorite-button" type="button">В избранное</button>
               <p class="product-card-stars product-card-stars-3"><span class="visually-hidden">3 звезды</span></p>
-              <p class="product-card-rating">Рейтинг: <span>6,9</span></p>
+              <p class="product-card-rating">Рейтинг: <span class="product-card-rating-number">6,9</span></p>
             </div>
           </li>
           <li class="product-card">
@@ -205,7 +220,7 @@
               <a class="product-card-button" href="#">Подробнее</a>
               <button class="add-favorite-button" type="button">В избранное</button>
               <p class="product-card-stars product-card-stars-2"><span class="visually-hidden">2 звезды</span></p>
-              <p class="product-card-rating">Рейтинг: <span>5,0</span></p>
+              <p class="product-card-rating">Рейтинг: <span class="product-card-rating-number">5,0</span></p>
             </div>
           </li>
         </ul>
@@ -234,8 +249,8 @@
         <div class="subscribe-block-d">
           <h2 class="header-block-two-d">Подпишитесь на рассылку</h2>
           <p class="description-block-d">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="subscribe-form-d" action="#" method="post">
-          <input class="subscribe-field-d" type="email" placeholder="Ваш e-mail">
+          <form class="subscribe-form-d" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="subscribe-field-d" type="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button-d" type="submit">Подписаться</button>
           </form>
         </div>
@@ -255,8 +270,8 @@
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
-        <li class="footer-social-item">
-          <a class="footer-social-link youtube" href="https://www.youtube.com/user/htmlacademyru">
+        <li class="footer-social-item youtube">
+          <a class="footer-social-link " href="https://www.youtube.com/user/htmlacademyru">
             <div class="footer-social-youtube"></div>
             <span class="visually-hidden">YouTube</span>
           </a>
@@ -264,7 +279,7 @@
       </ul>
       <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="copyright" href="https://htmlacademy.ru/">
-        <img class="htmlacademy-logo" src="images/htmlacademy.svg" width="115" height="34" alt="Лого HTMLacademy">
+        <span class="visually-hidden">Логотип HTML Academy</span>
       </a>
     </footer>
   </body>
