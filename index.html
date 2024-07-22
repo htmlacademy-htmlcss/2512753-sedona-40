@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+
   <body>
     <div class="body-list">
       <header class="page-header" data-test="header"> <!--  data  -->
@@ -99,7 +100,7 @@
             </li>
           </ul>
         </section>
-        <section class="infrastructure">
+        <section class="infrastructure" data-test="service">
           <h2 class="visually-hidden">Инфраструктура</h2>
           <p class="infrastructure-lead">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
           <p>Опытный персонал и качественное обслуживание!</p>
@@ -163,11 +164,16 @@
             </a>
           </li>
         </ul>
-        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="copyright" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Логотип HTML Academy</span>
-        </a>
+        <div class="footer-phone-block">
+          <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
+        <div class="footer-logo-block">
+          <a class="copyright" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">Логотип HTML Academy</span>
+          </a>
+        </div>
       </footer>
     </div>
   </body>
+
 </html>
