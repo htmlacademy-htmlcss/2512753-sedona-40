@@ -534,33 +534,30 @@ a {
 }
 
 .footer-social-vk {
-  mask-image: url(../images/vk.svg);
-  mask-position: center;
-  mask-repeat: no-repeat;
+  background-image: url(../images/vk.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   width: 24px;
   height: 14px;
   padding: 13px 12px;
-  background-color: #83B3D3;
 }
 
 .footer-social-tg {
-  mask-image: url(../images/telegram.svg);
-  mask-position: center;
-  mask-repeat: no-repeat;
+  background-image: url(../images/telegram.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   width: 17px;
   height: 16px;
   padding: 11px 15px;
-  background-color: #83B3D3;
 }
 
 .footer-social-youtube {
-  mask-image: url(../images/youtube.svg);
-  mask-position: center;
-  mask-repeat: no-repeat;
+  background-image: url(../images/youtube.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   width: 22px;
   height: 17px;
   padding: 12px 13px;
-  background-color: #83B3D3;
 }
 
 .footer-phone {
@@ -1791,10 +1788,6 @@ a {
   padding: 0;
 }
 
-
-
-
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1807,7 +1800,6 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 
 
 
@@ -2103,7 +2095,7 @@ a {
 .button-decrease-amount::before {
   content: "";
   display: block;
-  mask-image: url("../images/icons/minus.svg");
+  mask-image: url("../images/minus.svg");
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: rgba(117, 97, 87, 0.3);
@@ -2116,10 +2108,9 @@ a {
   display: block;
   margin: auto;
   content: "";
-  mask-image: url("../images/icons/plus.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: rgba(117, 97, 87, 0.3);
+  background-image: url("../images/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   width: 14px;
   height: 14px;
 }
@@ -2166,10 +2157,8 @@ a {
 }
 
 .modal-container-close {
- /* display: none; */
+  display: none;
 }
-
-/* Tooltip */
 
 .tooltip {
   position: absolute;
@@ -2215,20 +2204,18 @@ a {
   display: none;
 }
 
-.tooltip-text:after {
-  content: "";
-  background-image: url("../images/icons/triangle.svg");
-  width: 19px;
-  height: 9px;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
+
+
+.button-increase-amount:hover,
+.button-increase-amount:focus {
+  background-color: #68a2ca;
+}
+
+
+
+
+
