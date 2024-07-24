@@ -1775,6 +1775,7 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+
 .footer-phone-block {
   width: 331px;
   display: flex;
@@ -1790,6 +1791,10 @@ a {
   padding: 0;
 }
 
+
+
+
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1804,9 +1809,11 @@ a {
 }
 
 
+
+
 /* Модальное окно */
 
-.modal-block {
+.modal-container {
   position: fixed;
   top: 0px;
   left: 0;
