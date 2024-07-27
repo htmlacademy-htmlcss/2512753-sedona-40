@@ -143,14 +143,24 @@ a {
   background-image: url(../images/index-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto, cover;
+  background-size: cover;
   width: 1200px;
-  height: 485px;
+  min-height: 484px;
+}
+
+.hero-vector {
+  background-image: url(../images/vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: end;
+  width: 1200px;
+  min-height: 57px;
 }
 
 .hero-img {
   padding-top: 51px;
-  padding-bottom: 82px;
+  padding-bottom: 20px;
 }
 
 .lead {
@@ -480,7 +490,7 @@ a {
   background-image: url(../images/background-subscribe.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto, cover;
+  background-size: cover;
   width: 1200px;
   margin: 0;
   padding: 0;
@@ -534,30 +544,33 @@ a {
 }
 
 .footer-social-vk {
-  background-image: url(../images/vk.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  mask-image: url(../images/vk.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
   width: 24px;
   height: 14px;
   padding: 13px 12px;
+  background-color: #83b3d3;
 }
 
 .footer-social-tg {
-  background-image: url(../images/telegram.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  mask-image: url(../images/telegram.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
   width: 17px;
   height: 16px;
   padding: 11px 15px;
+  background-color: #83b3d3;
 }
 
 .footer-social-youtube {
-  background-image: url(../images/youtube.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  mask-image: url(../images/youtube.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
   width: 22px;
   height: 17px;
   padding: 12px 13px;
+  background-color: #83b3d3;
 }
 
 .footer-phone {
@@ -570,11 +583,12 @@ a {
 }
 
 .copyright {
-  background-image: url("../images/htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  mask-image: url("../images/htmlacademy.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
   width: 115px;
   height: 34px;
+  background-color: #000000;
 }
 
 .subscribe-form {
@@ -1085,7 +1099,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-left: 70px;
-  margin-bottom: 120px;
 }
 
 .catalog-filter-checkbox {
@@ -1391,11 +1404,11 @@ a {
 
 .copyright:hover,
 .copyright:focus {
-  background-color: #eeecea;
+  background-color: #756157;
 }
 
 .copyright:active {
-  background-color: rgba(117, 97, 87, 0.3);
+  background-color: #7561574d;
 }
 
 .breadcrumbs-link:hover {
@@ -1599,7 +1612,7 @@ a {
 .footer-social-youtube:active,
 .footer-social-tg:active,
 .footer-social-vk:active {
-  background-color: rgba(104, 162, 202, 0.3);
+  background-color: #68a2ca4d;
 }
 
 .view-buttons-item:hover {
@@ -1883,14 +1896,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: 48px;
+  row-gap: 24px;
 }
 
 .search-form-wrapper {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10px;
+  row-gap: 2px;
   align-items: center;
   justify-content: space-between;
 }
@@ -1911,7 +1924,7 @@ a {
 }
 
 .guests-wrapper:last-child .search-form-title {
-  margin-right: 80px;
+  margin-right: 83px;
 }
 
 .guests-amount-wrapper {
@@ -1942,6 +1955,8 @@ a {
 }
 
 .search-button-form {
+  position: relative;
+  top: 24px;
   align-self: stretch;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -1955,6 +1970,7 @@ a {
   border: none;
   background: #83b3d3;
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .search-form-button:hover,
@@ -2012,6 +2028,7 @@ a {
 
 .search-form-calendar {
   position: absolute;
+  top: 15px;
   right: 22px;
   fill: #000;
   opacity: 0.3;
@@ -2028,9 +2045,9 @@ a {
 }
 
 .search-form-text {
-  position: absolute;
-  left: 157px;
-  top: 53px;
+  position: relative;
+  margin-left: 157px;
+  margin-top: 1px;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -2202,6 +2219,20 @@ a {
   left: 50%;
   transform: translateX(-50%);
   display: none;
+  z-index: 100;
+}
+
+.tooltip-text:after {
+  content: "";
+  background-image: url("../images/triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -2214,8 +2245,3 @@ a {
 .button-increase-amount:focus {
   background-color: #68a2ca;
 }
-
-
-
-
-
