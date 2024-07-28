@@ -81,6 +81,7 @@ a {
 
 .navigation-logo {
   margin-right: 29px;
+  z-index: 500;
 }
 
 .navigation {
@@ -103,6 +104,7 @@ a {
   padding: 0;
   margin-bottom: 11px;
   width: 520px;
+  z-index: 500;
 }
 
 .navigation-user {
@@ -116,6 +118,7 @@ a {
   padding-left: 50px;
   margin-bottom: 11px;
   justify-content: right;
+  z-index: 500;
 }
 
 .navigation-list:last-child {
@@ -139,6 +142,9 @@ a {
 }
 
 .hero {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
   background-color: #55778d;
   background-image: url(../images/index-background.jpg);
   background-position: center;
@@ -148,19 +154,20 @@ a {
   min-height: 484px;
 }
 
-.hero-vector {
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 57px;
+  width: 100%;
   background-image: url(../images/vector.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-self: end;
-  width: 1200px;
-  min-height: 57px;
 }
 
 .hero-img {
   padding-top: 51px;
-  padding-bottom: 20px;
+  padding-bottom: 82px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lead {
@@ -713,7 +720,7 @@ a {
   width: 103px;
   margin: 0;
   padding: 13px 20px 11px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -728,7 +735,7 @@ a {
   width: 103px;
   margin: 0 2px;
   padding: 13px 20px 11px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1319,7 +1326,7 @@ a {
 
 .subscribe-button-d {
   text-align: center;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
